@@ -1,0 +1,29 @@
+
+#qouteText {
+  color: white;
+  margin: 10px;
+  font-family: "Comic Sans MS";
+}
+
+#quoteAuthor {
+  font-family: "Comic Sans MS";
+  color: white;
+  position: relative;
+  left: 40%;
+  font-size: small;
+}
+
+.qouteContainer {
+  border-color: white;
+  border-radius: 3px;
+  bottom: 20px;
+  border-style: solid;
+  border-width: thin;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+
+
