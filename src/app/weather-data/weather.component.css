@@ -1,4 +1,4 @@
-#city {
+#data {
   font-family: "Comic Sans MS";
   color: white;
   position: relative;
@@ -6,13 +6,6 @@
   font-size: small;
 }
 
-#temp {
-  font-family: "Comic Sans MS";
-  color: white;
-  position: relative;
-  left: 40%;
-  font-size: small;
-}
 
 .weatherContainer {
   top: 60px;
@@ -20,4 +13,9 @@
   left: 3%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
+}
+
+.centerImage {
+  position: fixed;
+  top: 40px;
 }

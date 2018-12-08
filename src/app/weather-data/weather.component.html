@@ -1,6 +1,4 @@
-<div class="weatherContainer">
-  <span *ngIf="actualWeatherData">
-    <p id="city">{{actualWeatherData.city}}</p>
-    <p id="temp">{{actualWeatherData.temp}} °C</p>
-  </span>
+<div class="weatherContainer" *ngIf="actualWeatherData">
+    <p id="data">{{actualWeatherData.city}}</p>
+    <p id="data">{{actualWeatherData.temp}} °C <img class="centerImage" src="http://openweathermap.org/img/w/{{actualWeatherData.icon}}.png" width="30" height="30"></p>
 </div>
