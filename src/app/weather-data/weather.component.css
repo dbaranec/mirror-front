@@ -1,0 +1,23 @@
+#city {
+  font-family: "Comic Sans MS";
+  color: white;
+  position: relative;
+  left: 40%;
+  font-size: small;
+}
+
+#temp {
+  font-family: "Comic Sans MS";
+  color: white;
+  position: relative;
+  left: 40%;
+  font-size: small;
+}
+
+.weatherContainer {
+  top: 60px;
+  position: fixed;
+  left: 3%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}

@@ -1,5 +1,5 @@
-import {QouteService} from '../shared/qoute/qoute.service';
 import {OnInit, Component} from '@angular/core';
+import {QouteService} from '../shared/qoute/qoute.service';
 import {QouteData} from '../shared/qoute/QouteData';
 
 @Component({
