@@ -3,6 +3,7 @@
   color: white;
   margin: 10px;
   font-family: "Comic Sans MS";
+  font-size: x-large;
 }
 
 #quoteAuthor {
@@ -10,11 +11,11 @@
   color: white;
   position: relative;
   left: 40%;
-  font-size: small;
+  font-size: medium;
 }
 
 .qouteContainer {
-  border-color: white;
+  //border-color: white;
   border-radius: 3px;
   bottom: 20px;
   border-style: solid;
