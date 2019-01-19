@@ -1,4 +1,10 @@
 <div class="weatherContainer" *ngIf="actualWeatherData">
     <p id="data">{{actualWeatherData.city}}</p>
     <p id="data">{{actualWeatherData.temp}} °C <img class="centerImage" src="http://openweathermap.org/img/w/{{actualWeatherData.icon}}.png" width="30" height="30"></p>
+    <p id="data">
+    <tr *ngFor="let item of forecastWeatherDataList">
+    <td>{{item.dayName}}</td>
+    <td>{{item.temp}} °C </td>
+    <td><img class="centerImage" src="http://openweathermap.org/img/w/{{item.icon}}.png" width="30" height="30"></td>
+  </tr></p>
 </div>

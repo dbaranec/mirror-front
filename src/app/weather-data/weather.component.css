@@ -8,7 +8,7 @@
 
 
 .weatherContainer {
-  top: 60px;
+  top: 120px;
   position: fixed;
   left: 3%;
   transform: translate(-50%, -50%);
@@ -16,6 +16,5 @@
 }
 
 .centerImage {
-  position: fixed;
-  top: 40px;
+  position: inherit;
 }

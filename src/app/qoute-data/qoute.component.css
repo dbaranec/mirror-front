@@ -3,7 +3,7 @@
   color: white;
   margin: 10px;
   font-family: "Comic Sans MS";
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 #quoteAuthor {
@@ -11,7 +11,7 @@
   color: white;
   position: relative;
   left: 40%;
-  font-size: medium;
+  font-size: larger;
 }
 
 .qouteContainer {
