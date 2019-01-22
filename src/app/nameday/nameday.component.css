@@ -1,15 +1,1 @@
-#namesday {
-  font-family: "Comic Sans MS";
-  color: white;
-  position: relative;
-  left: 40%;
-  font-size: small;
-}
 
-.namesdayContainer {
-  top: 60px;
-  position: fixed;
-  right: 4%;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-}

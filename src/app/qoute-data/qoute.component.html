@@ -1,6 +1,20 @@
-<div class="qouteContainer">
-  <span *ngIf="qouteData">
-    <p id="qouteText">{{qouteData.quoteText}}</p>
-    <p id="quoteAuthor">{{qouteData.quoteAuthor}}</p>
-  </span>
+<div class="row">
+  <div class="col-2">
+  </div>
+  <div class="col-8 text-center text-white">
+    <div *ngIf="qouteData">
+      {{qouteData.quoteText}}
+    </div>
+  </div>
+  <div class="col-2">
+  </div>
+</div>
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4 text-center text-white">
+    <div *ngIf="qouteData">
+      {{qouteData.quoteAuthor}}
+    </div>
+  </div>
+  <div class="col-4"></div>
 </div>
