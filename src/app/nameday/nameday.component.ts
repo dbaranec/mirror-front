@@ -10,8 +10,13 @@ import {NameDayData} from '../shared/nameday/NameDayData';
 export class NamedayComponent implements OnInit {
 
   private namesdayData: NameDayData;
+  private now: number;
 
-  constructor(private namesdayService: NamedayService) { }
+  constructor(private namesdayService: NamedayService) {
+    setInterval(() => {
+      this.now = Date.now();
+    }, 1);
+  }
 
   ngOnInit() {
     this.namesdayService.getNamesDayToday().subscribe(data => {
