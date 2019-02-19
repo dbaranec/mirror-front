@@ -9,6 +9,6 @@ export class NamedayService {
   }
 
   getNamesDayToday() {
-    return this.http.get<NameDayData>('http://dore-java.herokuapp.com/getNameDayToday');
+    return this.http.get<NameDayData>('//dore-java.herokuapp.com/getNameDayToday');
   }
 }

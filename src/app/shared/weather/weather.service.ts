@@ -11,10 +11,10 @@ export class WeatherService {
   }
 
   getActualWeather() {
-    return this.http.get<ActualWeather>('http://dore-java.herokuapp.com/getActualWeatherToday');
+    return this.http.get<ActualWeather>('//dore-java.herokuapp.com/getActualWeatherToday');
   }
 
   getForecastWeather(): Observable<ForecastWeather[]> {
-    return this.http.get<ForecastWeather[]>('http://dore-java.herokuapp.com/getForecastWeather');
+    return this.http.get<ForecastWeather[]>('//dore-java.herokuapp.com/getForecastWeather');
   }
 }
