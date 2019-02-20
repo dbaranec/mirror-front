@@ -9,7 +9,7 @@ export class QouteService {
   }
 
   getQouteData() {
-    return this.http.get<QouteData>('//localhost:8080/getQoute');
+    return this.http.get<QouteData>('//dore-java.herokuapp.com/getQoute');
 }
 
 }

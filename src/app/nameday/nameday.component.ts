@@ -9,8 +9,8 @@ import {NameDayData} from '../shared/nameday/NameDayData';
 })
 export class NamedayComponent implements OnInit {
 
-  private namesdayData: NameDayData;
-  private now: number;
+  namesdayData: NameDayData;
+  now: number;
 
   constructor(private namesdayService: NamedayService) {
     setInterval(() => {
