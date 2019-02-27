@@ -8,4 +8,5 @@ html, body {
 .main-container {
   height: 100%;
   background-color: black;
+  cursor: none;
 }
