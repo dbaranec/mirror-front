@@ -12,7 +12,9 @@ export class QouteComponent implements OnInit {
 
   qouteData: QouteData;
 
-  constructor(private qouteService: QouteService) { }
+  constructor(private qouteService: QouteService) {
+    setInterval(() => this.ngOnInit(), 3600000);
+  }
 
   ngOnInit() {
     this.qouteService.getQouteData().subscribe(data => {

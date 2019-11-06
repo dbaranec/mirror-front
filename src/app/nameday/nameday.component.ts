@@ -16,6 +16,8 @@ export class NamedayComponent implements OnInit {
     setInterval(() => {
       this.now = Date.now();
     }, 1);
+
+    setInterval(() => this.ngOnInit(), 300000);
   }
 
   ngOnInit() {

@@ -18,6 +18,7 @@ export class WeatherComponent implements OnInit {
   forecastWeatherDataList: ForecastWeather[] = [];
 
   constructor(private weatherService: WeatherService) {
+    setInterval(() => this.ngOnInit(), 3600000);
   }
 
   ngOnInit() {
