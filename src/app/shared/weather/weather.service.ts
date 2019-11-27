@@ -20,7 +20,7 @@ export class WeatherService {
   }
 
   getGeolocationBySite() {
-    return this.http.get<Geolocation>('//ip-api.com/json');
+    return this.http.get<Geolocation>('http://www.ip-api.com/json');
   }
 
   getGeolocationByBrowser(): Promise<Geolocation> {
