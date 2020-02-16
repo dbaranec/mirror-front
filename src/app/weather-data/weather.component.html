@@ -1,26 +1,34 @@
 <div class="col">
 
   <div class="row" *ngIf="actualWeatherData">
-    <div class="col-6" >
-      {{actualWeatherData.city}}
-    </div>
-    <div class="col-3  text-right">
+    <!--    <div class="col-6" >
+          {{actualWeatherData.city}}
+        </div>-->
+    <div class="col-6 actual-temp-size  text-right">
       {{actualWeatherData.temp}} °C
     </div>
-    <div class="col-3 text-right">
-      <img class="centerImage" src="http://openweathermap.org/img/w/{{actualWeatherData.icon}}.png" width="50" height="50">
+    <div class="col-6 text-right">
+      <img class="centerImage" src="http://openweathermap.org/img/w/{{actualWeatherData.icon}}.png" width="50"
+           height="50">
     </div>
   </div>
+  <hr color="white">
+  <div class="row" *ngFor="let item of forecastWeatherDataList; let i = index"
+       [ngClass]="{
+       'weather-opacity1':  i === 1,
+       'weather-opacity2':  i === 2,
+       'weather-opacity3':  i === 3}">
 
-  <div class="row" *ngFor="let item of forecastWeatherDataList">
-    <div class="col-6">
-      {{item.dayName}}
-    </div>
-    <div class="col-3 text-right">
-      {{item.temp}} °C
-    </div>
-    <div class="col-3 text-right">
-      <img class="centerImage" src="http://openweathermap.org/img/w/{{item.icon}}.png" width="50" height="50">
-    </div>
+      <div class="col-6 forecast-text-size" >
+        {{item.dayName}}
+      </div>
+      <div class="col-3 text-left forecast-text-size">
+        {{item.temp}} °C
+      </div>
+      <div class="col-3 text-right">
+        <img class="centerImage" src="http://openweathermap.org/img/w/{{item.icon}}.png" width="50" height="50">
+      </div>
+   <!-- </div>-->
+
   </div>
 </div>
