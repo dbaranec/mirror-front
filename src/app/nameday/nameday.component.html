@@ -1,13 +1,13 @@
 <div class="col" *ngIf="namesdayData">
   <div class="flex-row h5">
     {{namesdayData.nameDayToday}},
-    {{ now | date:'EEEE, LLL d, y'}}
+    {{weekDay | titlecase}}{{month | titlecase}}{{date}}
   </div>
   <div class="flex-row time-size">
-    {{ now | date:'h:mm'}}
-    <sup>{{ now | date:'ss'}}</sup>
+    {{time}}
+    <sup>{{seconds}}</sup>
     <div class="day-part h5 d-inline">
-      {{ now | date:'aa' | lowercase}}
+      {{timePeriod | titlecase}}
     </div>
   </div>
 </div>
