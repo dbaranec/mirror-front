@@ -4,11 +4,11 @@
 }
 
 .forecast-text-size {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .weather-opacity1 {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .weather-opacity2 {
@@ -16,6 +16,6 @@
 }
 
 .weather-opacity3 {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
