@@ -18,9 +18,9 @@
   <hr color="white">
   <div class="row" *ngFor="let item of forecastWeatherDataList; let i = index"
        [ngClass]="{
-       'weather-opacity1':  i === 1,
-       'weather-opacity2':  i === 2,
-       'weather-opacity3':  i === 3}">
+       'weather-opacity1':  i === 2,
+       'weather-opacity2':  i === 3,
+       'weather-opacity3':  i === 4}">
 
     <div class="col-6 forecast-text-size">
       {{item.dayName}}
