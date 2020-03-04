@@ -23,10 +23,6 @@ export class WeatherComponent implements OnInit {
   }
 
   ngOnInit() {
-
-
-
-
     this.weatherService.getGeolocationByBrowser().then(pos => {
       console.log(pos.lat);
       console.log(pos.lon);
@@ -46,14 +42,97 @@ export class WeatherComponent implements OnInit {
   public getAllWeather() {
     this.weatherService.getActualWeather(this.geolocation).subscribe(item => {
       this.actualWeatherData = item;
+      this.actualWeatherData.icon = this.findWeatherIconClass(item.icon);
       console.log(this.actualWeatherData.temp);
       console.log(this.actualWeatherData.icon);
       console.log(this.actualWeatherData.city);
     });
 
     this.weatherService.getForecastWeather(this.geolocation).subscribe(items => {
+      items.forEach(value => value.icon = this.findWeatherIconClass(value.icon))
       this.forecastWeatherDataList = items;
       log(items);
     });
+  }
+
+  findWeatherIconClass(icon: String): string {
+    switch (icon) {
+      case '01d': {
+        return 'wi-day-sunny';
+        break;
+      }
+      case '02d': {
+        return 'wi-day-cloudy';
+        break;
+      }
+      case '03d': {
+        return 'wi-cloudy';
+        break;
+      }
+      case '04d': {
+        return 'wi-cloudy-windy';
+        break;
+      }
+      case '09d': {
+        return 'wi-showers';
+        break;
+      }
+      case '10d': {
+        return 'wi-rain';
+        break;
+      }
+      case '11d': {
+        return 'wi-thunderstorm';
+        break;
+      }
+      case '13d': {
+        return 'wi-snow';
+        break;
+      }
+      case '50d': {
+        return 'wi-fog';
+        break;
+      }
+      case '01n': {
+        return 'wi-night-clear';
+        break;
+      }
+      case '02n': {
+        return 'wi-night-cloudy';
+        break;
+      }
+      case '03n': {
+        return 'wi-night-cloudy';
+        break;
+      }
+      case '04n': {
+        return 'wi-night-cloudy';
+        break;
+      }
+      case '09n': {
+        return 'wi-night-showers';
+        break;
+      }
+      case '10n': {
+        return 'wi-night-rain';
+        break;
+      }
+      case '11n': {
+        return 'wi-night-thunderstorm';
+        break;
+      }
+      case '13n': {
+        return 'wi-night-snow';
+        break;
+      }
+      case '50n': {
+        return 'wi-night-alt-cloudy-windy';
+        break;
+      }
+      default: {
+        return 'wi-night-alt-cloudy-windy';
+        break;
+      }
+    }
   }
 }
