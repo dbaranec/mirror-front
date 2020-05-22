@@ -139,30 +139,30 @@ export class WeatherComponent implements OnInit {
   private findWeatherWindDirectionIconClass(degree: number) {
 
     if (degree > 337.5) {
-      return 'wi-direction-up';
+      return 'wi-towards-n';
     }
     if (degree > 292.5) {
-      return 'wi-direction-up-left';
+      return 'wi-towards-nw';
     }
     if (degree > 247.5) {
-      return 'wi-direction-left';
+      return 'wi-towards-w';
     }
     if (degree > 202.5) {
-      return 'wi-direction-down-left';
+      return 'wi-towards-sw';
     }
     if (degree > 157.5) {
-      return 'wi-direction-down';
+      return 'wi-towards-s';
     }
     if (degree > 122.5) {
-      return 'wi-direction-down-right';
+      return 'wi-towards-se';
     }
     if (degree > 67.5) {
-      return 'wi-direction-right';
+      return 'wi-towards-e';
     }
     if (degree > 22.5) {
-      return 'wi-direction-up-right';
+      return 'wi-towards-ne';
     }
-    return 'wi-direction-up';
+    return 'wi-towards-n';
   }
 
 }
