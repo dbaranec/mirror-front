@@ -4,7 +4,6 @@ import {ActualWeather} from '../shared/weather/ActualWeather';
 import {log} from 'util';
 import {ForecastWeather} from '../shared/weather/ForecastWeather';
 import {Geolocation} from '../shared/weather/Geolocation';
-import {el} from '@angular/platform-browser/testing/src/browser_util';
 
 @Component({
   selector: 'app-weather',
@@ -43,19 +42,20 @@ export class WeatherComponent implements OnInit {
     this.weatherService.getActualWeather(this.geolocation).subscribe(item => {
       this.actualWeatherData = item;
       this.actualWeatherData.icon = this.findWeatherIconClass(item.icon);
-      console.log(this.actualWeatherData.temp);
-      console.log(this.actualWeatherData.icon);
-      console.log(this.actualWeatherData.city);
+      console.log('Smer vetra ' + item.windDirection);
+      this.actualWeatherData.windDirection = this.findWeatherWindDirectionIconClass(parseInt(item.windDirection, 10));
+      console.log('Smer vetra ' + this.actualWeatherData.windDirection);
+      console.log(this.actualWeatherData.windSpeed);
     });
 
     this.weatherService.getForecastWeather(this.geolocation).subscribe(items => {
-      items.forEach(value => value.icon = this.findWeatherIconClass(value.icon))
+      items.forEach(value => value.icon = this.findWeatherIconClass(value.icon));
       this.forecastWeatherDataList = items;
       log(items);
     });
   }
 
-  findWeatherIconClass(icon: String): string {
+  private findWeatherIconClass(icon: String): string {
     switch (icon) {
       case '01d': {
         return 'wi-day-sunny';
@@ -135,4 +135,34 @@ export class WeatherComponent implements OnInit {
       }
     }
   }
+
+  private findWeatherWindDirectionIconClass(degree: number) {
+
+    if (degree > 337.5) {
+      return 'wi-direction-up';
+    }
+    if (degree > 292.5) {
+      return 'wi-direction-up-left';
+    }
+    if (degree > 247.5) {
+      return 'wi-direction-left';
+    }
+    if (degree > 202.5) {
+      return 'wi-direction-down-left';
+    }
+    if (degree > 157.5) {
+      return 'wi-direction-down';
+    }
+    if (degree > 122.5) {
+      return 'wi-direction-down-right';
+    }
+    if (degree > 67.5) {
+      return 'wi-direction-right';
+    }
+    if (degree > 22.5) {
+      return 'wi-direction-up-right';
+    }
+    return 'wi-direction-up';
+  }
+
 }

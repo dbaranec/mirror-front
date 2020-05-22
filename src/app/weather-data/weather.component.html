@@ -4,15 +4,16 @@
     <!--    <div class="col-6" >
           {{actualWeatherData.city}}
         </div>-->
-    <div class="col-6 actual-temp-size  text-right">
+    <div class="col-3 actual-temp-size  text-right">
       {{actualWeatherData.temp}} °C
     </div>
-  <!--  <div class="col-3 text-right">
-      <div class="wi wi-day-sunny" style="font-size: 3em"></div>
-    </div>-->
-    <div class="col-6 text-right wi {{actualWeatherData.icon}}" style="font-size: 4em">
+    <div class="col-3 wi {{actualWeatherData.icon}}" style="font-size: 4em">
     </div>
-
+    <div class="col-1 wi {{actualWeatherData.windDirection}} text-right" style="font-size: 4em">
+    </div>
+    <div class="col-3 actual-temp-size text-left">
+      {{actualWeatherData.windSpeed}}/ms
+    </div>
 
   </div>
   <hr color="white">
