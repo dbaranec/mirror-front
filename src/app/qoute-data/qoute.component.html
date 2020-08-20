@@ -3,7 +3,7 @@
   </div>
   <div class="col-8 text-center">
     <div *ngIf="qouteData">
-      ‘ {{qouteData.quoteText}} ’
+      ‘{{qouteData.quoteText}}’
     </div>
   </div>
   <div class="col-2">
@@ -17,4 +17,22 @@
     </div>
   </div>
   <div class="col-2"></div>
+</div>
+
+<div class="row">
+  <div class="row col-11">
+  </div>
+  <div class="row col-1 text-right">
+    {{version}}
+  </div>
+</div>
+
+<div class="col-12">
+  <p class="marquee">
+   <span>
+     <div *ngIf="rssData">
+     {{rssData.rss}}
+    </div>
+   </span>
+  </p>
 </div>

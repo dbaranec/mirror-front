@@ -1,3 +1,44 @@
 .quote-size-main {
   font-size: 2rem;
 }
+
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-width: thin;
+  font-size:  1.5rem;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  /* show the marquee just outside the paragraph */
+  will-change: transform;
+  animation: marquee 350s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+/* Respect user preferences about animations */
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    white-space: normal
+  }
+  .marquee span {
+    animation-iteration-count: 1;
+    animation-duration: 0.01;
+    /* instead of animation: none, so an animationend event is
+     * still available, if previously attached.
+     */
+    padding-left: 0;
+  }
+}

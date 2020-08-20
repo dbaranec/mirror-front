@@ -41,6 +41,7 @@ export class WeatherComponent implements OnInit {
   public getAllWeather() {
     this.weatherService.getActualWeather(this.geolocation).subscribe(item => {
       this.actualWeatherData = item;
+      this.actualWeatherData.windSpeed = Math.round(item.windSpeed);
       this.actualWeatherData.icon = this.findWeatherIconClass(item.icon);
       console.log('Smer vetra ' + item.windDirection);
       this.actualWeatherData.windDirection = this.findWeatherWindDirectionIconClass(parseInt(item.windDirection, 10));

@@ -10,6 +10,7 @@ import { WeatherComponent } from './weather-data/weather.component';
 import {WeatherService} from './shared/weather/weather.service';
 import { NamedayComponent } from './nameday/nameday.component';
 import {NamedayService} from './shared/nameday/nameday.service';
+import {NewsFeedService} from './shared/newsFeed/newsFeed.service';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import {NamedayService} from './shared/nameday/nameday.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [QouteService, WeatherService, NamedayService],
+  providers: [QouteService, WeatherService, NamedayService, NewsFeedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
