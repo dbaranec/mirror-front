@@ -18,7 +18,7 @@ export class WeatherComponent implements OnInit {
   geolocation: Geolocation;
 
   constructor(private weatherService: WeatherService) {
-    setInterval(() => this.ngOnInit(), 3600000);
+    setInterval(() => this.ngOnInit(), 900000);
   }
 
   ngOnInit() {
