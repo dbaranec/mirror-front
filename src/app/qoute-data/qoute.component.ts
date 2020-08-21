@@ -13,7 +13,7 @@ import {NewsFeedService} from '../shared/newsFeed/newsFeed.service';
 export class QouteComponent implements OnInit {
 
   qouteData: QouteData;
-  version = '0.27v';
+  version = '0.28v';
   rssData: RssData;
 
   constructor(private qouteService: QouteService, private newsFeedService: NewsFeedService) {
