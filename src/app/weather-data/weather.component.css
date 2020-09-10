@@ -24,10 +24,15 @@
 }
 
 .actualTempMinMax {
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
   text-align: center;
-  padding-top: 1em;
-  padding-right: 0.1em;
-  line-height: 0.1em;
+  padding-top: 0.8rem;
+  padding-right: 0.1rem;
+  line-height: 0.1rem;
+  font-size: 1.5rem;
+}
+
+hr {
+  height: 0.3rem
 }
 

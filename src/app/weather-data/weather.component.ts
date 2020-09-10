@@ -16,6 +16,8 @@ export class WeatherComponent implements OnInit {
   actualWeatherData: ActualWeather;
   forecastWeatherDataList: ForecastWeather[] = [];
   geolocation: Geolocation;
+  actualDayMax: string;
+  actualDayMin: string;
 
   constructor(private weatherService: WeatherService) {
     setInterval(() => this.ngOnInit(), 900000);
@@ -52,7 +54,11 @@ export class WeatherComponent implements OnInit {
     this.weatherService.getForecastWeather(this.geolocation).subscribe(items => {
       items.forEach(value => value.icon = this.findWeatherIconClass(value.icon));
       this.forecastWeatherDataList = items;
-      this.forecastWeatherDataList = items.slice(0, 5);
+      this.actualDayMax = items[0].tempMax;
+      this.actualDayMin = items[0].tempMin;
+
+      // remove actual day from list
+      this.forecastWeatherDataList = items.slice(1, 6);
       log(this.forecastWeatherDataList);
     });
   }
