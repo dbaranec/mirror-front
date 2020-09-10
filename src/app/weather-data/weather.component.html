@@ -8,9 +8,19 @@
       <div class=" actual-temp-size text-left" style="align-self: flex-end">{{actualWeatherData.temp}}°C&nbsp;</div>
       <div class="wi {{actualWeatherData.icon}} text-left" style="font-size: 4.5em; align-self: center"></div>
     </div>
-    <div class="col-6 row" style="padding-right: 0; padding-left: 50px">
+    <div class="col-1 actualTempMinMax">
+      <div class="row">
+        <div class="col-12">39</div>
+      </div>
+      <hr color="white">
+      <div class="row">
+        <div class="col-12">10</div>
+      </div>
+    </div>
+    <div class="col-5 row" style="padding-right: 0; padding-left: 30px">
       <div class="actual-temp-size" style="align-self: flex-end">{{actualWeatherData.windSpeed}}/ms&nbsp;</div>
-      <div class="wi wi-wind {{actualWeatherData.windDirection}}" style="font-size: 3.6em; : green; align-self: center"></div>
+      <div class="wi wi-wind {{actualWeatherData.windDirection}}"
+           style="font-size: 3.6em; : green; align-self: center"></div>
     </div>
 
   </div>
