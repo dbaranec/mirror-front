@@ -52,7 +52,8 @@ export class WeatherComponent implements OnInit {
     this.weatherService.getForecastWeather(this.geolocation).subscribe(items => {
       items.forEach(value => value.icon = this.findWeatherIconClass(value.icon));
       this.forecastWeatherDataList = items;
-      log(items);
+      this.forecastWeatherDataList = items.slice(0, 5);
+      log(this.forecastWeatherDataList);
     });
   }
 
