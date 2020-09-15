@@ -1,4 +1,4 @@
-import {OnInit, Component} from '@angular/core';
+import {OnInit, Component, Input} from '@angular/core';
 import {QouteService} from '../shared/qoute/qoute.service';
 import {QouteData} from '../shared/qoute/QouteData';
 import {RssData} from '../shared/newsFeed/RssData';
@@ -13,7 +13,9 @@ import {NewsFeedService} from '../shared/newsFeed/newsFeed.service';
 export class QouteComponent implements OnInit {
 
   qouteData: QouteData;
-  version = '0.28v';
+
+  @Input() version;
+
   rssData: RssData;
 
   constructor(private qouteService: QouteService, private newsFeedService: NewsFeedService) {
@@ -22,7 +24,7 @@ export class QouteComponent implements OnInit {
 
   ngOnInit() {
     this.qouteService.getQouteData().subscribe(data => {
-      console.log(data)
+      console.log(data);
       this.qouteData = data;
     });
 

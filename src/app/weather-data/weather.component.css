@@ -32,7 +32,8 @@
   font-size: 1.5rem;
 }
 
-hr {
-  height: 0.3rem
+.line {
+  border: none white;
+  border-bottom-style: solid;
 }
 

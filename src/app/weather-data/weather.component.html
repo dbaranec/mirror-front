@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-12">{{actualDayMax}}</div>
       </div>
-      <hr color="white">
+      <hr class="line">
       <div class="row">
         <div class="col-12">{{actualDayMin}}</div>
       </div>
@@ -24,7 +24,7 @@
     </div>
 
   </div>
-  <hr color="white">
+  <hr class="line">
   <div class="row" *ngFor="let item of forecastWeatherDataList; let i = index"
        [ngClass]="{
        'weather-opacity1':  i === 2,
