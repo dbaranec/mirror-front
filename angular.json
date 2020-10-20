@@ -11,6 +11,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "moment/min/locales",
+              "util"
+            ],
             "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
