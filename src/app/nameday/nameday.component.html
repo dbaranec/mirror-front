@@ -1,4 +1,4 @@
-<div class="col" *ngIf="namesdayData">
+<div class="col">
   <div class="flex-row time-size">
     {{time}}
     <sup>{{seconds}}</sup>
@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="flex-row text-size">
-    {{namesdayData.nameDayToday}},
+    <ng-container *ngIf="namesdayData">{{namesdayData.nameDayToday}}</ng-container>,
     {{weekDay | titlecase}}{{month | titlecase}}{{date}}
   </div>
 </div>
